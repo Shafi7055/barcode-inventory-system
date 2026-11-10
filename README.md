@@ -2,10 +2,14 @@
 
 A simple system to track inventory using barcodes.
 
-## What it does
-- Tracks products and components
-- Records receiving and delivery
-- Shows inventory history
+The application is built with JavaScript and JSX.
 
-## Setup
-Setup instructions will be added soon.
+## Development
+
+Install dependencies with `npm install`, then start the development server:
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view the app.
