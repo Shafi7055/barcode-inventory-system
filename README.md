@@ -1,15 +1,17 @@
 # Barcode Inventory System
 
-A simple system to track inventory using barcodes.
+A barcode inventory system with a Next.js frontend and an Express/PostgreSQL API for local development. The dashboard, inventory actions, catalog administration, and reports connect to the backend without login.
 
-The application is built with JavaScript and JSX.
+The endpoint contract is documented in the backend's [API design](../barcode-inventory-backend/API-DESIGN.md) and machine-readable [OpenAPI specification](../barcode-inventory-backend/openapi.json).
 
 ## Development
 
-Install dependencies with `npm install`, then start the development server:
+Follow the backend [setup guide](../barcode-inventory-backend/README.md) to create the database and schema. This no-auth setup is for local development only and must not be exposed to a network. Then configure the frontend API URL and start the frontend:
 
 ```bash
+npm install
 npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to view the app.
+
