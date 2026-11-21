@@ -80,7 +80,7 @@ The brief plans 18 working days across seven phases:
 
 ## Current implementation status
 
-The current frontend is Next.js/React and the backend is Node.js/Express with PostgreSQL. The backend is currently configured for local development without authentication or role checks. This status is a comparison with the brief, not a change to the requested scope.
+The frontend is Next.js/React and the backend is Node.js/Express with PostgreSQL. Authentication and role checks are now implemented; remaining gaps below concern other requirements in the assignment brief.
 
 | Area | Current status |
 | --- | --- |
@@ -90,8 +90,8 @@ The current frontend is Next.js/React and the backend is Node.js/Express with Po
 | Master data | Partial: products, components, and stock points can be created and listed; edit, deactivate, and delete workflows are absent. |
 | Reversals | Partial: receipt/delivery reversals require a reason and add history; role restriction is absent and component reversal is unsupported. |
 | Reports | Partial: stock details, date summary, barcode history, and audit-log endpoints exist; the summary graph and CSV/Excel export are absent. |
-| Authentication and roles | Not implemented: no registration, login/logout, password management, role assignment, or server-side role authorization. |
-| Audit log | Partial: master-data creation is audited; user changes, logins, and old/new values for edits are not supported. |
+| Authentication and roles | Implemented: login/logout, hashed passwords, Report Viewer-only public registration, Admin account creation and role assignment, password changes, and API-enforced role authorization. |
+| Audit log | Partial: login/logout, registration, password changes, master-data creation, and user updates are recorded; authentication failures and comprehensive old/new values are not currently recorded. |
 | Search, filters, pagination | Partial: API pagination exists for some lists/reports; UI does not provide complete search/filter/pagination across every list and report. |
-| User lifecycle | Not implemented: user activation/deactivation and forced logout are absent. |
+| User lifecycle | Implemented: Admins can deactivate users; role changes, deactivation, and password changes revoke active sessions. |
 | Validation | Partial: server validation and API error details exist; duplicate-scan warnings and full client validation need work. |

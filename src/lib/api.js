@@ -1,6 +1,4 @@
-const API_BASE_URL = (
-  process.env.NEXT_PUBLIC_API_BASE_URL || "http://127.0.0.1:4000/api/v1"
-).replace(/\/+$/, "");
+const API_BASE_URL = "/api/v1";
 
 export class ApiError extends Error {
   constructor(status, error) {
@@ -21,6 +19,7 @@ export async function apiRequest(path, options = {}) {
     method: options.method || "GET",
     headers,
     cache: "no-store",
+    credentials: "same-origin",
     ...(options.body !== undefined ? { body: JSON.stringify(options.body) } : {}),
   });
 
