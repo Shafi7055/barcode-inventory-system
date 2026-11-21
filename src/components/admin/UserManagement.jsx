@@ -130,8 +130,10 @@ export default function UserManagement() {
                     <td>{user.username}</td>
                     <td colSpan="3">
                       <form className="user-row-form" onSubmit={(event) => updateUser(user, event)}>
-                        <select className="input" name="role" defaultValue={user.role}>
-                          {roles.map((role) => <option key={role.name} value={role.name}>{role.name}</option>)}
+                        <select className="input" name="role" defaultValue={user.role} disabled={user.role === "Admin"}>
+                          {user.role === "Admin"
+                            ? <option value="Admin">Admin</option>
+                            : roles.map((role) => <option key={role.name} value={role.name}>{role.name}</option>)}
                         </select>
                         <label className="user-active-field">
                           <input type="checkbox" name="isActive" defaultChecked={user.isActive} />
