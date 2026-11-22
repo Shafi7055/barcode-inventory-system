@@ -15,5 +15,5 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3002](http://localhost:3002) to sign in. Public registration creates read-only Report Viewer accounts; Admins create accounts for operational roles.
+Open [http://localhost:3000](http://localhost:3000) to sign in. Public registration creates read-only Report Viewer accounts; Admins create accounts for operational roles.
 
